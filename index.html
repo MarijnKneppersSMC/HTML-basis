@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>My first HTML website</title>
-	  <link rel="stylesheet" href="style.css" />
+    	<title>My first HTML website</title>
+		<link rel="stylesheet" href="style.css" />
+		<script>
+			function SubmitQuestions(username, password, robot, reason, student)
+			{
+				alert(`Username: ${username}\n`
+					+ `Password: ${password}\n`
+					+ `You set not a robot to: ${robot}\n`
+					+ `Your reason for joining: ${reason}\n`
+					+ `As the type of person you are you selected: ${student.options[student.selectedIndex].text}`);
+			}
+		</script>
     </head>
     <body>
         <h1>My first website</h1>
@@ -24,25 +34,30 @@
 
         <img src="images/badge1.gif" width="120" height="90" alt="HTML Dog Icon">
 
-        <form>
+        <form name="questions" action="javascript:SubmitQuestions(username.value, password.value, robot.value, reason.value, type)">
             <p>Username</p>
-            <input type="text">
+            <input id="username" type="text">
 
             <p>Password</p>
-            <input type="password">
+            <input id="password" type="password">
 
             <p>I am not a robot</p>
-            <input type="checkbox">
+            <input id="robot" type="checkbox">
 
             <p>Why did you visit the website?</p>
-            <textarea rows="5" cols="20" placeholder="Please enter your reason for visiting this website here"></textarea>
+            <textarea id="reason" rows="5" cols="20" placeholder="Please enter your reason for visiting this website here"></textarea>
 
             <p>What kind of user are you?</p>
-            <select>
+            <select id="type">
                 <option>Student</option>
                 <option>Teacher</option>
                 <option>Other</option>
             </select>
+
+			<br>
+			<br>
+
+			<input name="Submit"  type="submit" value="submit" />
         </form>
     </body>
 </html>

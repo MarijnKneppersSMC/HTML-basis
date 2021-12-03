@@ -36,3 +36,8 @@ a
 {
 	font-style: italic;
 }
+
+form
+{
+	background: rgb(235, 235, 235);
+}
