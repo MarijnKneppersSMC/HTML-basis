@@ -1,0 +1,38 @@
+body {
+    font-size: 15px;
+	background-color: rgb(245, 245, 245)
+}
+
+
+h1 {
+    color: black;
+    background-color: darkgray;
+}
+
+strong
+{
+	font-style: italic;
+	text-transform: uppercase;
+	color: red;
+}
+
+h2
+{
+    border-style: solid;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red;
+	background-color: red;
+}
+
+.WARNING
+{
+	border-style: none;
+	background-color: rgb(245, 245, 245);
+}
+
+a
+{
+	font-style: italic;
+}
